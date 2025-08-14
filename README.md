@@ -1,13 +1,7 @@
-# REPO2LLMD
-
-[![VS Code Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/your-publisher.repo2llmd?style=for-the-badge&label=Marketplace)](https://marketplace.visualstudio.com/items?itemName=your-publisher.repo2llmd)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/your-publisher.repo2llmd?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=your-publisher.repo2llmd)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-Tired of manually copy-pasting files to provide context to a Large Language Model (LLM) like ChatGPT, Claude, or Gemini? **REPO2LLMD** is a Visual Studio Code extension that automates this process. It intelligently scans your workspace, respects your existing `.gitignore` rules, and bundles all relevant code into a single, clean Markdown file, perfectly formatted for any LLM.
+Tired of manually copy-pasting files to provide context to a Large Language Model (LLM) like ChatGPT, Claude, or Gemini? LLM.md Builder is a Visual Studio Code extension that automates this process. It intelligently scans your workspace, respects your existing `.gitignore` rules, and bundles all relevant code into a single, clean Markdown file, perfectly formatted for any LLM.
 
 
-## Why Use REPO2LLMD?
+## Why Use LLM?
 
 Providing an LLM with your full project context is key to getting high-quality, relevant responses. However, this is often a tedious and error-prone process. This extension solves that by:
 
@@ -35,14 +29,14 @@ Providing an LLM with your full project context is key to getting high-quality, 
 
 ## How to Use
 
-The easiest way to use **REPO2LLMD** is by clicking the icon in the editor's title bar.
+The easiest way to use **LLM.md Builder** is by clicking the icon in the editor's title bar.
 
-![Editor Icon Screenshot](https://raw.githubusercontent.com/your-username/repo2llmd/main/docs/icon-screenshot.png)
-*(Note: You will need to add a screenshot showing the icon's location)*
+![Editor Icon Screenshot](images/sshot.png)
+
 
 1.  **Install** the extension.
 2.  Open any file in your project.
-3.  Click the **REPO2LLMD icon**
+3.  Click the **LLM.md Builder icon**
 4.  The extension will generate the `LLM_*.md` file and open it.
 
 
@@ -82,7 +76,7 @@ To add the clickable icon and set the user-friendly command name, you will need 
   "commands": [
     {
       "command": "llmMd.generate",
-      "title": "REPO2LLMD: Generate Markdown Context",
+      "title": "LLM.md Builder: Generate Markdown Context",
       "icon": "$(file-code)"
     }
   ],
@@ -98,7 +92,7 @@ To add the clickable icon and set the user-friendly command name, you will need 
 }
 ```
 **Explanation:**
-*   **`commands`**: This section re-titles your existing `llmMd.generate` command to the user-friendly "REPO2LLMD: Generate Markdown Context". It also assigns a default VS Code icon (`$(file-code)`). You can replace this with a path to your own SVG icon (e.g., `"icon": "path/to/your/icon.svg"`).
+*   **`commands`**: This section re-titles your existing `llmMd.generate` command to the user-friendly "LLM.md Builder: Generate Markdown Context". It also assigns a default VS Code icon (`$(file-code)`). You can replace this with a path to your own SVG icon (e.g., `"icon": "path/to/your/icon.svg"`).
 *   **`menus`**: This section is what makes the icon appear in the editor's title bar.
 
 With this change, your `extension.ts` code **does not need to be modified at all** and the extension will work exactly as you've requested.
