@@ -67,32 +67,3 @@ docs/
 # Exclude large test assets
 tests/assets/
 ```
-
-
-To add the clickable icon and set the user-friendly command name, you will need to edit your **`package.json`** file. Replace the `contributes` section (or add it if it doesn't exist) with the following:
-
-```json
-"contributes": {
-  "commands": [
-    {
-      "command": "llmMd.generate",
-      "title": "LLM.md Builder: Generate Markdown Context",
-      "icon": "$(file-code)"
-    }
-  ],
-  "menus": {
-    "editor/title": [
-      {
-        "when": "resourceLangId",
-        "command": "llmMd.generate",
-        "group": "navigation"
-      }
-    ]
-  }
-}
-```
-**Explanation:**
-*   **`commands`**: This section re-titles your existing `llmMd.generate` command to the user-friendly "LLM.md Builder: Generate Markdown Context". It also assigns a default VS Code icon (`$(file-code)`). You can replace this with a path to your own SVG icon (e.g., `"icon": "path/to/your/icon.svg"`).
-*   **`menus`**: This section is what makes the icon appear in the editor's title bar.
-
-With this change, your `extension.ts` code **does not need to be modified at all** and the extension will work exactly as you've requested.
