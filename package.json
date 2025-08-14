@@ -1,0 +1,81 @@
+{
+  "name": "REPO2LLMD",
+  "displayName": "LLM.md Builder",
+  "description": "Simple tool to quickly generate LLM.md files from your workspace with automatic binary file exclusion.",
+  "version": "1.0.0",
+  "publisher": "Riza Mohammad Khan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/llm-md-builder"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/llm-md-builder/issues"
+  },
+  "homepage": "https://github.com/your-username/llm-md-builder#readme",
+  "keywords": [
+    "llm",
+    "ai",
+    "documentation",
+    "code-export",
+    "markdown",
+    "chatgpt",
+    "claude",
+    "productivity"
+  ],
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Other",
+    "Formatters",
+    "Snippets"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "llmMd.generate",
+        "title": "Generate LLM.md",
+        "category": "LLM",
+        "icon": "$(file-text)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "llmMd.generate",
+          "when": "true",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "llmMd.generate",
+          "when": "explorerResourceIsFolder",
+          "group": "llm"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.84.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "ignore": "^7.0.5"
+  }
+}
