@@ -2,7 +2,7 @@
   "name": "llm-md-builder",
   "displayName": "LLM.md Builder",
   "description": "Simple tool to quickly generate LLM.md files from your workspace with automatic binary file exclusion.",
-  "version": "1.1.0",
+  "version": "2.1.1",
   "publisher": "RizaMohammadKhan",
   "repository": {
     "type": "git",
@@ -31,9 +31,9 @@
     "Snippets"
   ],
   "main": "./out/extension.js",
-"activationEvents": [
-    "*"
-],
+  "activationEvents": [
+    "onCommand:llmMd.generate"
+ ],
   "icon": "images/Icon.png",
 
   "contributes": {

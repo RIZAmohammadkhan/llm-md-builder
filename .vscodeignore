@@ -1,7 +1,25 @@
-**/.vscode/**
+# Ignore the output of the compiler
+out/test/
+
+# Ignore source code, we only ship the compiled JS
+src/
+
+# Ignore development/build-related files
+.vscode/
+.github/
+tsconfig.json
+.eslintrc.json
+.prettierrc
 **/*.map
-**/tsconfig.json
-**/.gitignore
-**/node_modules/**
+
+# Ignore test files
 **/*.test.ts
 **/*.spec.ts
+
+# Ignore git and packaging artifacts
+.gitignore
+*.vsix
+
+# Ignore top-level node_modules. vsce will still package the 
+# production 'dependencies' from package.json automatically.
+/node_modules/
