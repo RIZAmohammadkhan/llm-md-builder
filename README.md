@@ -6,8 +6,6 @@
 
 Tired of manually copy-pasting files to provide context to a Large Language Model (LLM) like ChatGPT, Claude, or Gemini? **REPO2LLMD** is a Visual Studio Code extension that automates this process. It intelligently scans your workspace, respects your existing `.gitignore` rules, and bundles all relevant code into a single, clean Markdown file, perfectly formatted for any LLM.
 
-![REPO2LLMD Demo](https://raw.githubusercontent.com/your-username/repo2llmd/main/docs/demo.gif)
-*(Note: You will need to create and add a demo GIF at this path)*
 
 ## Why Use REPO2LLMD?
 
@@ -44,12 +42,9 @@ The easiest way to use **REPO2LLMD** is by clicking the icon in the editor's tit
 
 1.  **Install** the extension.
 2.  Open any file in your project.
-3.  Click the **REPO2LLMD icon** (it looks like `[your-icon]`) in the top-right of your editor.
+3.  Click the **REPO2LLMD icon**
 4.  The extension will generate the `LLM_*.md` file and open it.
 
-Alternatively, you can use the **Command Palette**:
-1.  Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`).
-2.  Type and select **`REPO2LLMD: Generate Markdown Context`**.
 
 ## How Filtering Works
 
@@ -79,9 +74,6 @@ docs/
 tests/assets/
 ```
 
-## Configuration
-
-There are no VS Code settings to configure. All filtering customization is handled via the `.gitignore` and `.llmignore` files within your project.
 
 To add the clickable icon and set the user-friendly command name, you will need to edit your **`package.json`** file. Replace the `contributes` section (or add it if it doesn't exist) with the following:
 

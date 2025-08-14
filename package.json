@@ -1,17 +1,17 @@
 {
-  "name": "REPO2LLMD",
+  "name": "llm-md-builder",
   "displayName": "LLM.md Builder",
   "description": "Simple tool to quickly generate LLM.md files from your workspace with automatic binary file exclusion.",
   "version": "1.0.0",
   "publisher": "Riza Mohammad Khan",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/llm-md-builder"
+    "url": "https://github.com/RIZAmohammadkhan/llm-md-builder"
   },
   "bugs": {
-    "url": "https://github.com/your-username/llm-md-builder/issues"
+    "url": "https://github.com/RIZAmohammadkhan/llm-md-builder/issues"
   },
-  "homepage": "https://github.com/your-username/llm-md-builder#readme",
+  "homepage": "https://github.com/RIZAmohammadkhan/llm-md-builder#readme",
   "keywords": [
     "llm",
     "ai",
